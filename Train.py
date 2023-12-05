@@ -53,11 +53,14 @@ def parse_args():
         "--eval_file", type=str, default=None, help="Text evaluation file in CONLL format"
     )
     
+    parser.add_argument(
+        "--transformer", type=str, default=None, help="Transformer model"
+    )
     arg = parser.parse_args()
     return arg
 
 
-def main(args, transformer):
+def main(args):
     arg = parse_args()
     EPOCHS = args['epochs']
     MAX_LENGTH = args['max_lenght']
@@ -66,7 +69,7 @@ def main(args, transformer):
     LEARNING_RATE = 0.0001
     WARMUP_STEPS = 500
 
-    print("TRANSFORMER=", transformer)
+    print("TRANSFORMER=", arg.transformer)
 
     # For wikiner corpus
     print("loading data")
@@ -122,7 +125,7 @@ def main(args, transformer):
         dataset_validation=validation,
         tag_scheme=tag_scheme,
         tag_outside='O',
-        transformer=transformer,
+        transformer=arg.transformer,
         dropout=dropout,
         hyperparameters=training_hyperparameters
     )
@@ -156,4 +159,4 @@ def main(args, transformer):
 if __name__ == "__main__":
     #params = nni.get_next_parameter()
     params = {'epochs': 1, 'train_batch_size': 32, 'max_lenght': 128}
-    main(params, sys.argv[1])
+    main(params)

@@ -48,10 +48,10 @@ This code is based on the python library NERDA :
 
 ### Model Training
 1. Provide a training and evaluation text file in conll format : `ner-train.txt` and `ner-eval.txt`
-2. Run the following command to train the embedding 
+2. Run the following command to train the model 
 
 ```
-    python Train.py --train_file ner-train.txt --eval_file ner-eval.txt
+    python Train.py --train_file ner-train.txt --eval_file ner-eval.txt --transformer flaubert/flaubert_base_uncased
 ```
 
 ### Notes
