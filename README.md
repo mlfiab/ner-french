@@ -31,6 +31,8 @@ Obviously for privacy reasons, we are not allowed to share the dataset used in t
 We assume that the dataset in conll format
 e.g: paris LOC
 
+the list of tags is defined by the variable `tag_scheme` in `Train.py`
+
 ## Architectures
 It's an implementation of BERT-like based architecture.
 This code is based on the python library NERDA :
