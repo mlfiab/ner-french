@@ -1,4 +1,4 @@
-# Automatic ICD-10 code classification system in French with CNN
+# Named Entity Recognition in De-identification context
 - [Named Entity Recognition System](https://www.scitepress.org/AffiliationsProfile.aspx?Org=GF8fm9Pz1/t4nCksDBuZSAev55k9kp2r6cj9ox63seJ01X5Vb84wVmxj5/W4g5/p2hmNPfBolRCcLXCUAeMgHA==&t=1)
 
 
